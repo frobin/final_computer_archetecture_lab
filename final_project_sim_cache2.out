@@ -5,9 +5,9 @@ non-commercial use.  No portion of this work may be used by any commercial
 entity, or for any commercial purpose, without the prior written permission
 of SimpleScalar, LLC (info@simplescalar.com).
 
-sim: command line: ./sim-cache -config final_project_cache2.cfg -redir:sim final_project_sim_cache2.out tests-pisa/bin.little/test-math 
+sim: command line: ./sim-cache -config final_project_cache2.cfg -redir:sim final_project_sim_cache2_round2.out tests-pisa/bin.little/test-math 
 
-sim: simulation started @ Sun Nov 25 21:47:49 2012, options follow:
+sim: simulation started @ Wed Nov 28 22:44:06 2012, options follow:
 
 sim-cache: This simulator implements a functional cache simulator.  Cache
 statistics are generated for a user-selected cache and TLB configuration,
@@ -24,7 +24,7 @@ information is generated.
 -seed                       1 # random number generator seed (0 for timer seed)
 # -q                    false # initialize and terminate immediately
 # -chkpt               <null> # restore EIO trace execution from <fname>
-# -redir:sim     final_project_sim_cache2.out # redirect simulator output to file (non-interactive only)
+# -redir:sim     final_project_sim_cache2_round2.out # redirect simulator output to file (non-interactive only)
 # -redir:prog          <null> # redirect simulated program output to file
 -nice                       0 # simulator scheduling priority
 -max:inst                   0 # maximum number of inst's to execute
@@ -118,16 +118,16 @@ dl2.miss_rate                0.3571 # miss rate (i.e., misses/ref)
 dl2.repl_rate                0.2830 # replacement rate (i.e., repls/ref)
 dl2.wb_rate                  0.1858 # writeback rate (i.e., wrbks/ref)
 dl2.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
-dl3.accesses                      0 # total number of accesses
-dl3.hits                          0 # total number of hits
-dl3.misses                        0 # total number of misses
-dl3.replacements                  0 # total number of replacements
-dl3.writebacks                    0 # total number of writebacks
+dl3.accesses                  16379 # total number of accesses
+dl3.hits                      11063 # total number of hits
+dl3.misses                     5316 # total number of misses
+dl3.replacements               4807 # total number of replacements
+dl3.writebacks                  298 # total number of writebacks
 dl3.invalidations                 0 # total number of invalidations
-dl3.miss_rate          <error: divide by zero> # miss rate (i.e., misses/ref)
-dl3.repl_rate          <error: divide by zero> # replacement rate (i.e., repls/ref)
-dl3.wb_rate            <error: divide by zero> # writeback rate (i.e., wrbks/ref)
-dl3.inv_rate           <error: divide by zero> # invalidation rate (i.e., invs/ref)
+dl3.miss_rate                0.3246 # miss rate (i.e., misses/ref)
+dl3.repl_rate                0.2935 # replacement rate (i.e., repls/ref)
+dl3.wb_rate                  0.0182 # writeback rate (i.e., wrbks/ref)
+dl3.inv_rate                 0.0000 # invalidation rate (i.e., invs/ref)
 ld_text_base             0x00400000 # program text (code) segment base
 ld_text_size                  91744 # program text (code) size in bytes
 ld_data_base             0x10000000 # program initialized data segment base
@@ -140,6 +140,6 @@ ld_target_big_endian              0 # target executable endian-ness, non-zero if
 mem.page_count                   33 # total number of pages allocated
 mem.page_mem                   132k # total size of memory pages allocated
 mem.ptab_misses                  34 # total first level page table misses
-mem.ptab_accesses           1545697 # total page table accesses
+mem.ptab_accesses           1545699 # total page table accesses
 mem.ptab_miss_rate           0.0000 # first level page table miss rate
 
